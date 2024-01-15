@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Outfit:wght@300;400;500;600;800&display=swap");
+
+@font-face {
+  font-family: "Mont";
+  src: url("/fonts/Mont-Black.otf");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-primary font-bold text-shadow-100;
+  }
+  h2 {
+    @apply text-secondary font-semibold text-shadow-200;
+  }
+  h3 {
+    @apply text-subtitle font-semibold text-shadow-200;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    color: transparent;
+    background-clip: text;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    filter: contrast(1) drop-shadow(1px 2px 6px rgba(0, 0, 0, 0.2));
+  }
+
+  .text-shadow-100 {
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.8);
+  }
+  .text-shadow-200 {
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  .flex-row {
+    @apply flex items-center align-middle justify-center flex-nowrap;
+  }
+  .flex-column {
+    @apply flex flex-col items-start justify-center;
+  }
+
+  .p-section {
+    padding: max(3%, 1rem) 0 0;
+  }
+  .dp-shad {
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.6));
+  }
+
+  .bg-gradient-100 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, #fffcd1 0%);
+  }
+  .bg-img {
+    @apply w-full h-full bg-cover bg-center bg-no-repeat;
+    background-image: url("/public/images/roadmapbg.png");
+  }
+  .radial {
+    position: absolute;
+    background: radial-gradient(circle at center, red, blue 50%);
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@layer components {
+  .grid-columns-two {
+    grid-template-columns: auto auto;
+  }
+  .grid-cols-roadmap {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

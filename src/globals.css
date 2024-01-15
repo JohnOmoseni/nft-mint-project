@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: #111;
+  min-width: 0;
+}
+
+html {
+  overflow-x: hidden;
+  height: 100%;
+  font-family: "Gilroy-Regular" ui-sans-serif, system-ui, "-apple-system",
+    "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  font-weight: 300;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: none;
+  text-decoration-skip-ink: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-bg: #fffaea;
+  --color-text: "#111";
+  --color-scroll-thumb: "#005958";
+  --drop-shadow: "";
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden auto;
+  line-height: inherit;
+  background: var(--color-bg);
+}
+
+body::selection {
+  background-color: #18dc87;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper :is(a, .icon, button) {
+  cursor: pointer;
+}
+
+small {
+  font-size: 80%;
+}
+
+.wrapper .icon {
+  display: grid;
+  place-items: center;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.wrapper :where(.icon:hover, button, a:hover) {
+  filter: drop-shadow(0 0 1em var(--dp-shadow));
+}
+
+.wrapper :where(a, span) {
+  color: inherit;
+  font-family: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.wrapper :where(input:hover, input:focus, textarea:hover, textarea:focus) {
+  outline: none;
+}
+
+.wrapper :where(img) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
+.wrapper :where(ul li) {
+  list-style-type: none;
+  display: list-item;
+}
+
+/* fast-marquee custom styling */
+.rfm-initial-child-container,
+.rfm-marquee {
+  gap: 10em;
+}
+
+.rfm-marquee:last-of-type {
+  margin-left: 8em;
+}
+
+.rfm-child {
+  width: 200px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background: #aaa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scroll-thumb);
+  border-radius: 1rem;
+}
