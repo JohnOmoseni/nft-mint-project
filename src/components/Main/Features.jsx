@@ -32,7 +32,7 @@ const Card = ({ title, body, idx }) => {
         whileInView="animate"
         viewport={{ once: true, amount: 0.2 }}
         custom={idx}
-        className="max-sm:min-h-[50vh] border border-solid border-[#00cc5258] self-start bg-[#FFF8DF] bg-opacity-60 backdrop-blur-md py-3 px-4 rounded-2xl card-shadow transition-sm odd:self-end"
+        className=" border border-solid border-[#00cc5258] self-start bg-[#FFF8DF] bg-opacity-60 backdrop-blur-md py-3 px-4 rounded-2xl card-shadow transition-sm odd:self-end"
       >
         <div className="flex-row !justify-start gap-2">
           <Vector />
@@ -57,7 +57,7 @@ const Card = ({ title, body, idx }) => {
 
 function Features() {
   return (
-    <div className="relative bg-[#fff0bd] p-section !pb-10 min-h-[100vh] bg-img-features">
+    <div className="relative bg-[#fff0bd] p-section !pb-10 min-h-[70vh] sm:min-h-[100vh] bg-img-features">
       <div className=" mx-auto bg-[#222] bg-opacity-80 backdrop-blur-sm rounded-full overflow-auto px-3 w-[60px] h-[35px]">
         <img src={logo} alt="" className="" />
       </div>
@@ -67,7 +67,7 @@ function Features() {
           variants={container}
           initial="hidden"
           whileInView="animate"
-          className="scroll-snap py-12 pb-[4em] sm:py-[5em] sm:pb-[3em] px-3 gap-4 sm:gap-8 justify-between grid grid-cols-features w-[98%] mx-auto max-sm:auto-cols-min sm:max-md:auto-cols-[40%] min-h-[80vh]"
+          className="scroll-snap py-12 pb-[4em] sm:py-[5em] sm:pb-[3em] px-3 gap-4 sm:gap-8 justify-between grid grid-cols-features w-[98%] mx-auto max-sm:auto-cols-min sm:max-md:auto-cols-[40%] h-features sm:min-h-[80vh]"
         >
           {features.map((item, idx) => {
             return <Card {...item} key={idx} idx={idx} />;

@@ -115,6 +115,9 @@
     left: 20%;
     mix-blend-mode: hard-light;
   }
+  .h-features {
+    min-height: min(370px, 50vh);
+  }
 
   @media (max-width: 640px) {
     .bg-img-hero {

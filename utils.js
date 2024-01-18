@@ -16,7 +16,7 @@ export const aboutAnimate = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      delay: 0.4,
+      delay: 1.2,
     },
   },
   hiddenBody: { opacity: 0, scale: 0.8 },
@@ -25,19 +25,7 @@ export const aboutAnimate = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      delay: 1.3,
-    },
-  },
-};
-
-export const innerAnimate = {
-  hidden: { opacity: 0, y: 100 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      ease: "easeIn",
-      duration: 0.8,
+      delay: 0.2,
     },
   },
 };
@@ -53,10 +41,4 @@ export const listAnimate = {
       type: "spring",
     },
   }),
-};
-
-export const pageVariant = {
-  hidden: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0, transition: { duration: 2 } },
-  exit: { opacity: 0, y: 30, transition: { duration: 10 } },
 };

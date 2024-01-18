@@ -19,7 +19,7 @@ function Hero() {
         variants={listAnimate}
         initial="hidden"
         whileInView="animate"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="w-full px-4"
       >
         <h1 className="capitalize px-2 relative  text-center select-none ">
@@ -42,6 +42,7 @@ function Hero() {
         variants={listAnimate}
         initial="hidden"
         whileInView="animate"
+        viewport={{ once: true, amount: 0.3 }}
         className="relative -bottom-12 mt-auto mx-auto icon min-w-[320px] max-w-[600px] md:max-w-[600px]"
       >
         <img src={heroimg} alt="" />
