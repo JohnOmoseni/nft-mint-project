@@ -1,9 +1,10 @@
 import "./index.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Header from "./components/Header";
+import Menu from "./components/Menu";
 
 const Home = React.lazy(() => import("./pages/Home"));
 

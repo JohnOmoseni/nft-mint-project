@@ -11,7 +11,7 @@ const animateMenu = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 0.2,
+      delay: 0.1,
       duration: 0.8,
       type: "spring",
       mass: 0.3,
@@ -34,7 +34,7 @@ const animateMenu = {
 function Menu({ setOpenMenu }) {
   return (
     <motion.div
-      className="block lg:hidden bg-body z-50 w-full fixed inset-0 h-100dvh bg-opacity-30 backdrop-blur-sm"
+      className="block lg:hidden bg-body z-[9999] w-full fixed inset-0 h-100dvh bg-opacity-30 backdrop-blur-sm"
       variants={animateMenu}
       initial="hidden"
       animate="visible"
@@ -42,7 +42,7 @@ function Menu({ setOpenMenu }) {
       onClick={() => setOpenMenu(false)}
     >
       <div
-        className="w-[80%] isolate h-full absolute top-0 right-0 bg-[#111] flex-column gap-4 !items-center pb-6 text-white overflow-hidden"
+        className="w-[80%] isolate h-full absolute top-0 right-0 bg-[#111] flex text-white overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <span
@@ -52,7 +52,7 @@ function Menu({ setOpenMenu }) {
         >
           <IoClose size="30" className="close-menu" fill="white" />
         </span>
-        <nav className="flex-1 text-xl flex-column gap-6 mt-16 mb-16 md:mt-[20%] md:mb-[15%] px-[4%] overflow-y-auto">
+        <nav className="text-xl mx-auto flex-column gap-6 px-[4%]">
           {navLinks.map((link, idx) => (
             <NavLinks
               key={idx}

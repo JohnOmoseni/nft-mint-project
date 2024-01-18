@@ -1,37 +1,35 @@
 import { footerLinks } from "@constants/navLinks";
 import { Link as LinkScroll } from "react-scroll";
 import { Link } from "react-router-dom";
+import img from "@assets/images/logo.png";
 
 const FooterLink = ({ name, href, icon: Icon }) => (
   <Link to={href} className="!flex items-center gap-1">
-    <Icon fill="white" className="max-sm:text-xl text-lg icon" />
-    <span className="!hidden sm:!block text-shadow-200 text-sm">{name}</span>
+    <Icon fill="white" className="max-sm:text-xl text-lg icon mt-0.5" />
+    <span className="!hidden sm:!block !text-white font-familymedium leading-0">
+      {name}
+    </span>
   </Link>
 );
 
 function Footer() {
   return (
-    <div className="fixed bottom-0 left-0 w-full shadow-sm bg-[#242424] flex-row gap-8 !justify-between py-4 px-6 max-sm:p-3">
-      <div className="flex-row gap-2">
-        <p className="rounded-full w-[20px] h-[20px] icon border border-solid border-neutral-800 leading-5 align-middle">
-          C
-        </p>
-        <p className="font-familymedium whitespace-nowrap text-xs">
-          Cheetahlabs Copyright. 2023.
-        </p>
-      </div>
+    <div className="relative md:fixed bottom-0 left-0 z-[999] w-full shadow-sm bg-[#242424] flex-row gap-8 !justify-between !text-neutral-300 px-5 max-sm:p-3">
+      <p className="font-familymedium max-sm:text-sm  whitespace-nowrap mt-1 leading-0">
+        Cheetahlabs Copyright. 2023.
+      </p>
       <LinkScroll
         to="home"
         spy={true}
         smooth={true}
-        offset={-30}
-        duration={400}
-        className="!hidden sm:!block w-[100px]"
+        offset={-80}
+        duration={100}
+        className="!hidden sm:!block w-[60px]"
       >
-        <img src="" alt="injdragon" className="h-auto" />
+        <img src={img} alt="" className="h-auto" />
       </LinkScroll>
 
-      <div className="flex-row gap-6 sm:gap-4 max-sm:flex-wrap max-sm:justify-end">
+      <div className="flex-row gap-4 sm:gap-4 max-sm:justify-end">
         {footerLinks?.map((link, idx) => {
           return <FooterLink key={idx} {...link} />;
         })}

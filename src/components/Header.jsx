@@ -7,38 +7,38 @@ import logo from "@assets/images/logo.png";
 
 const Header = ({ setOpenMenu }) => {
   return (
-    <header className="max-sm:fixed top-2 left-2 right-2 z-50 max-sm:rounded-md max-sm:shadow-sm max-sm:backdrop-blur-sm max-sm:bg-opacity-80 bg-[#242424] flex-row gap-8 !justify-between mx-auto py-4 px-6 max-sm:p-3  ">
+    <header className="max-sm:fixed top-2 left-2 right-2 z-50 max-sm:rounded-md max-sm:shadow-sm max-sm:backdrop-blur-sm max-sm:bg-opacity-80 bg-[#242424] flex-row gap-8 !justify-between mx-auto pr-3 sm:py-2 sm:pr-6 sm:pl-4 !text-white shadow-sm">
       <Link
         to="home"
         spy={true}
         smooth={true}
         offset={0}
         duration={400}
-        className="group !flex flex-row items-center !justify-evenly  transition-sm hover:scale-[0.9]"
+        className="group !flex flex-row items-center !justify-evenly transition-sm hover:scale-[0.9]"
       >
         <img
           src={logo}
           alt="infinity"
-          className="relative -top-0.5 !w-[40px] group-hover:drop-shadow-md"
+          className="relative !w-[50px] sm:!w-[60px] group-hover:drop-shadow-md"
         />
-        <p className="text-sm md:text-base self-end font-familybold pb-1 tracking-tight whitespace-nowrap uppercase text-shadow-100">
+        <p className="text-sm md:text-lg font-familybold tracking-tight whitespace-nowrap uppercase dp-shad -ml-1">
           INFINITY WEALTH
         </p>
       </Link>
 
-      <div className="hidden sm:flex-row gap-4">
+      <div className="hidden md:flex-row gap-4">
         {navLinks?.map((link, idx) => (
           <LinkRow key={idx} {...link} />
         ))}
       </div>
 
-      <div className="block sm:hidden" onClick={() => setOpenMenu(true)}>
-        <HiOutlineMenuAlt4 size={20} color="#111" />
+      <div className="block md:hidden" onClick={() => setOpenMenu(true)}>
+        <HiOutlineMenuAlt4 size={20} color="#dddeee" />
       </div>
 
       <Button
         title="Connect Wallet"
-        className="hidden sm:block text-white bg-black border border-solid border-[#e6e4e4be]"
+        className="hidden md:block !whitespace-normal leading-4 text-neutral-300 text-[1rem] bg-black bg-opacity-40 border border-solid border-[#e6e4e462]"
       />
     </header>
   );

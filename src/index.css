@@ -1,8 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=Outfit:wght@300;400;500;600;800&display=swap");
-
 @font-face {
-  font-family: "Mont";
-  src: url("/fonts/Mont-Black.otf");
+  font-family: "Gilroy-Regular";
+  src: url("/fonts/Gilroy-Regular.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("/fonts/Gilroy-Medium.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("/fonts/Gilroy-Bold.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("/fonts/Gilroy-Thin.ttf");
 }
 
 @tailwind base;
@@ -11,13 +21,13 @@
 
 @layer base {
   h1 {
-    @apply text-primary font-bold text-shadow-100;
+    @apply text-primary font-bold font-familybold text-shadow-100;
   }
   h2 {
-    @apply text-secondary font-semibold text-shadow-200;
+    @apply text-secondary font-semibold font-familybold text-shadow-200;
   }
   h3 {
-    @apply text-subtitle font-semibold text-shadow-200;
+    @apply text-subtitle  font-familymedium text-shadow-200;
   }
 }
 
@@ -33,8 +43,13 @@
     filter: contrast(1) drop-shadow(1px 2px 6px rgba(0, 0, 0, 0.2));
   }
 
+  .text-gradient-100 {
+    @apply text-gradient;
+    background-image: linear-gradient(to bottom right, #72f8a7, #00a261 90%);
+  }
+
   .text-shadow-100 {
-    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.8);
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.8);
   }
   .text-shadow-200 {
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
@@ -48,30 +63,89 @@
   }
 
   .p-section {
-    padding: max(3%, 1rem) 0 0;
+    padding: max(3%, 1.5rem) 0 1em;
   }
-  .dp-shad {
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.6));
+  .dp-shad-black {
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
   }
 
-  .bg-gradient-100 {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, #fffcd1 0%);
-  }
-  .bg-img {
+  .bg-img-roadmap {
     @apply w-full h-full bg-cover bg-center bg-no-repeat;
-    background-image: url("/public/images/roadmapbg.png");
+    background-image: url("/public/images/roadmap.png");
   }
+
+  .bg-img-hero {
+    @apply w-full bg-no-repeat;
+    background-image: url("/public/images/coin-green.png"),
+      url("/public/images/yellow-leaf.png"),
+      url("/public/images/yellow-leaf-blur.png"),
+      url("/public/images/coin-blur.png"), url("/public/images/yellow-coin.png"),
+      url("/public/images/leaf 7.png"), url("/public/images/green-leaf.png"),
+      url("/public/images/yellow-leaf.png"),
+      url("/public/images/coin-green.png");
+    background-size: 20px, 50px, 100px, 200px, 50px, 80px, 200px, 40px, 20px;
+    background-position: 5px 10px, right top, 90% 85%, 90% 10%, 80% 50%, 10% 90%,
+      10% 15%, left bottom, right 90%;
+  }
+
+  .bg-img-features {
+    @apply w-full bg-no-repeat;
+    background-image: url("/public/images/features.png");
+    background-size: 100% 100px;
+    background-position: bottom;
+  }
+  .bg-img-about {
+    @apply w-full bg-no-repeat;
+    background-image: url("/public/images/cloud.png"),
+      url("/public/images/Cloud 2.png");
+    background-size: 30% 90px, 65% 80px;
+    background-position: left top, right top;
+  }
+
   .radial {
     position: absolute;
-    background: radial-gradient(circle at center, red, blue 50%);
-    width: 80px;
-    height: 80px;
+    background: radial-gradient(
+      circle at center,
+      rgba(1, 67, 27, 0.7) 15%,
+      rgba(255, 250, 234, 0) 50%
+    );
+    width: var(--radial-size);
+    height: var(--radial-size);
+    top: calc(50% - 200px);
+    left: 20%;
+    mix-blend-mode: hard-light;
+  }
+
+  @media (max-width: 640px) {
+    .bg-img-hero {
+      background-image: url("/public/images/coin-green.png"),
+        url("/public/images/yellow-leaf.png"),
+        url("/public/images/yellow-coin.png"), url("/public/images/leaf 7.png"),
+        url("/public/images/green-leaf.png"),
+        url("/public/images/coin-green.png");
+      background-size: 50px, 50px, 30px, 30px, 60px, 15px;
+      background-position: -20px 6%, 90% 70%, 95% 30%, 5px 80%, right 55px,
+        right bottom;
+    }
+    .radial {
+      width: 300px;
+      height: 300px;
+      top: calc(70% - 200px);
+      left: 10%;
+      mix-blend-mode: color-burn;
+    }
   }
 }
 
 @layer components {
   .grid-columns-two {
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 1fr;
+  }
+  .grid-cols-features {
+    grid-auto-flow: column;
+    grid-auto-columns: 28%;
+    overflow: auto hidden;
+    overscroll-behavior-inline: contain;
   }
   .grid-cols-roadmap {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

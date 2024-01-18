@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        body: "white",
-        "br-clr": "#009897",
+        body: "#fffaea",
+        "br-clr": "#d9ffe8",
       },
       boxShadow: {
         100: "0px 2px 5px rgba(0,0,0, 0.3)",
@@ -15,7 +15,9 @@ export default {
         sm: "3px",
       },
       fontFamily: {
-        outfit: ["Outfit", "Arial", "sans-serif"],
+        familybold: ["Gilroy-Bold", "Arial", "sans-serif"],
+        familymedium: ["Gilroy-Medium", "Arial", "sans-serif"],
+        familylight: ["Gilroy-Light", "Arial", "sans-serif"],
       },
       fontSize: {
         tiny: ["0.65rem", { lineHeight: "1" }],
@@ -23,7 +25,8 @@ export default {
         base: ["0.9rem", { lineHeight: "1.6" }],
         subtitle: ["clamp(1.2rem, 1vw, 20px)", { lineHeight: "1.2" }],
         secondary: ["clamp(1.5rem, 3vw + 1rem, 40px) ", { lineHeight: "1.2" }],
-        primary: ["clamp(115px, 15vw + 1rem, 200px)", { lineHeight: "1.3" }],
+        section: ["clamp(40px, 5vw + 1rem, 80px) ", { lineHeight: "1" }],
+        primary: ["clamp(60px, 10vw + 1rem, 120px)", { lineHeight: "1" }],
       },
     },
   },
@@ -41,6 +44,10 @@ export default {
         },
         ".green": {
           color: "#00732E",
+        },
+        ".card-shadow ": {
+          boxShadow:
+            "1px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 2px 30px rgba(253, 246, 220, 0.5)",
         },
       };
 

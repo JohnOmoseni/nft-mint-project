@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  color: #111;
   min-width: 0;
 }
 
@@ -16,7 +15,7 @@ html {
     "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans",
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
-  font-weight: 300;
+  font-weight: 400;
   font-feature-settings: normal;
   font-variation-settings: normal;
 }
@@ -33,6 +32,7 @@ html {
   --color-bg: #fffaea;
   --color-text: "#111";
   --color-scroll-thumb: "#005958";
+  --radial-size: 200px;
   --drop-shadow: "";
 }
 
@@ -41,6 +41,7 @@ body {
   min-height: 100vh;
   overflow: hidden auto;
   line-height: inherit;
+  color: #111;
   background: var(--color-bg);
 }
 
@@ -110,6 +111,19 @@ small {
 
 .rfm-child {
   width: 200px;
+}
+
+/* scroll-snap */
+.wrapper .scroll-snap {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1em;
+}
+.wrapper .scroll-snap > * {
+  scroll-snap-align: start;
+}
+.wrapper .scroll-snap::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 ::-webkit-scrollbar {

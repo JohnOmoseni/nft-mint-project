@@ -26,10 +26,6 @@ export const navLinks = [
     name: "Docs",
     href: "https://bit.ly/dragonswhitepaper",
   },
-  {
-    name: "FAQ",
-    href: "faq",
-  },
 ];
 
 export const footerLinks = [
