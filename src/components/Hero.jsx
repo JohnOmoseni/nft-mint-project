@@ -22,7 +22,7 @@ function Hero() {
         viewport={{ once: true, amount: 0.1 }}
         className="w-full px-4"
       >
-        <h1 className="capitalize px-2 relative  text-center select-none ">
+        <h1 className="capitalize px-2 relative  text-center select-none !text-shadow-200">
           <span className="!font-familylight font-[400] leading-[50px]">
             Welcome to
           </span>
