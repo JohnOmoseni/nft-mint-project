@@ -1,8 +1,16 @@
 import { roadmap } from "@constants/constants";
 import { motion } from "framer-motion";
+import { listAnimate } from "../../../utils";
 
-export const Card = ({ phase, list }) => (
-  <div className="w-full bg-[#D9FFE8] bg-opacity-40  py-4 px-4 flex-column !justify-start gap-3 backdrop-blur-md border border-solid border-[#e9fafa3f] min-h-[280px] transition-sm rounded-md shadow-200 hover:backdrop-blur-sm hover:dp-shad">
+export const Card = ({ phase, list, idx }) => (
+  <motion.div
+    variants={listAnimate}
+    initial="hidden"
+    whileInView="animate"
+    viewport={{ once: true, amount: 0.2 }}
+    custom={idx}
+    className="w-full bg-[#D9FFE8] bg-opacity-40  py-4 px-4 flex-column !justify-start gap-3 backdrop-blur-md border border-solid border-[#e9fafa3f] min-h-[280px] transition-sm rounded-md shadow-200 hover:backdrop-blur-sm hover:dp-shad"
+  >
     <h3 className="font-familybold text-gradient-100">{phase}</h3>
     <ul className="relative flex-column gap-3 py-6 px-6">
       {list.map((text, idx) => (
@@ -11,7 +19,7 @@ export const Card = ({ phase, list }) => (
         </li>
       ))}
     </ul>
-  </div>
+  </motion.div>
 );
 
 function Roadmap() {
@@ -26,7 +34,7 @@ function Roadmap() {
       <h2 className="text-center capitalize green">Roadmap</h2>
       <ul className="lg:absolute w-[90%] lg:w-[80%] max-sm:mt-[3em] mt-[4em] mb-6 bottom-[10%] left-0 right-0 mx-auto grid grid-cols-roadmap items-center gap-8">
         {roadmap?.map((item, idx) => (
-          <Card key={idx} {...item} />
+          <Card key={idx} {...item} idx={idx} />
         ))}
       </ul>
     </motion.div>

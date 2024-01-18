@@ -6,7 +6,7 @@ import rock from "@assets/images/rock.png";
 
 function Section() {
   return (
-    <div className="w-full min-h-[80vh] md:min-h-[100vh] lg:min-h-[75vh] pt-[2em] md:pt-[6%] md:px-[4%] -mb-3 md:mb-[5vh] md:flex items-start gap-4 relative overflow-hidden isolate">
+    <div className="w-full min-h-[80vh] md:min-h-[100vh] lg:min-h-[90vh] pt-[2em] md:pt-[5%] md:px-[4%] -mb-3 md:mb-[5vh] md:flex items-start gap-4 relative overflow-hidden isolate">
       <div className="w-[80%] mx-auto md:w-[60%] md:mx-0 md:mb-[2em]">
         <h2 className="max-md:text-center text-section font-familybold text-shadow-100 select-none max-sm:px-3">
           Ready to Invest in the Future of Agriculture?

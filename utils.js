@@ -9,6 +9,27 @@ export const container = {
   },
 };
 
+export const aboutAnimate = {
+  hidden: { opacity: 0, x: -100 },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      delay: 0.4,
+    },
+  },
+  hiddenBody: { opacity: 0, scale: 0.8 },
+  scale: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      delay: 1.3,
+    },
+  },
+};
+
 export const innerAnimate = {
   hidden: { opacity: 0, y: 100 },
   animate: {
@@ -27,7 +48,7 @@ export const listAnimate = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: custom * 0.08,
+      delay: custom * 0.1,
       duration: 0.8,
       type: "spring",
     },

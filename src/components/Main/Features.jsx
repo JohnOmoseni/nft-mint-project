@@ -5,7 +5,7 @@ import { features } from "@constants/constants";
 import Button from "../Button";
 import logo from "@assets/images/logo.png";
 import Vector from "@icons/Vector";
-import { container, listAnimate } from "../../../utils";
+import { container, listAnimate } from "@utils";
 
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -29,7 +29,8 @@ const Card = ({ title, body, idx }) => {
       <motion.div
         variants={listAnimate}
         initial="hidden"
-        animate="animate"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.2 }}
         custom={idx}
         className="max-sm:min-h-[50vh] border border-solid border-[#00cc5258] self-start bg-[#FFF8DF] bg-opacity-60 backdrop-blur-md py-3 px-4 rounded-2xl card-shadow transition-sm odd:self-end"
       >
@@ -63,10 +64,10 @@ function Features() {
       <h2 className="text-center capitalize green my-1">Our Features</h2>
       <div>
         <motion.div
+          variants={container}
           initial="hidden"
           whileInView="animate"
-          viewport={{ once: true, amount: 0.2 }}
-          className="scroll-snap py-12 pb-[4em] sm:py-[5em] sm:pb-[3em] px-3 gap-4 sm:gap-8 justify-between grid grid-cols-features w-[98%] mx-auto max-sm:auto-cols-min sm:max-md:auto-cols-[40%] min-h-[80vh] md:min-h-[65vh]"
+          className="scroll-snap py-12 pb-[4em] sm:py-[5em] sm:pb-[3em] px-3 gap-4 sm:gap-8 justify-between grid grid-cols-features w-[98%] mx-auto max-sm:auto-cols-min sm:max-md:auto-cols-[40%] min-h-[80vh]"
         >
           {features.map((item, idx) => {
             return <Card {...item} key={idx} idx={idx} />;

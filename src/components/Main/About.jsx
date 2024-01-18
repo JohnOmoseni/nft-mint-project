@@ -4,14 +4,14 @@ import grass from "@assets/images/grass.png";
 import about from "@assets/images/about.png";
 import tree from "@assets/images/tree2.png";
 import coin from "@assets/images/coin-green.png";
+import { aboutAnimate, container } from "../../../utils";
 
 function About() {
   return (
     <motion.div
       id="about"
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      whileInView="animate"
       className="relative bg-img-about bg-[#FFFEE9] shadow-md min-h-[110vh]"
     >
       <div className="w-full pt-[20%] md:pt-[15%] lg:pt-[8%] flex-column px-6 pb-12">
@@ -19,7 +19,13 @@ function About() {
           About us
         </h2>
         <div className="w-full flex-column sm:grid grid-columns-two sm:items-center gap-4 mx-auto sm:mt-4 md:min-h-[60vh]">
-          <div className="sm:order-2 flex-column px-3 mb-[5%] md:mb-[10%] md:justify-self-center">
+          <motion.div
+            variants={aboutAnimate}
+            initial="hiddenBody"
+            whileInView="scale"
+            viewport={{ once: true, amount: 0.2 }}
+            className="sm:order-2 flex-column px-3 mb-[5%] md:mb-[10%] md:justify-self-center"
+          >
             <div className="w-full">
               <h3 className="capitalize text-2xl max-sm:text-center">
                 Lorem ipsum dolor sit.
@@ -36,9 +42,15 @@ function About() {
                 className="mt-10 flex bg-[#00732E] text-white  capitalize font-familylight text-shadow-200 shadow-sm hover:!dp-shad max-sm:!mx-auto"
               />
             </div>
-          </div>
+          </motion.div>
 
-          <div className="w-full h-[400px] sm:h-full border border-solid border-[#cc920058] sm:max-md:w-[320px] md:w-[400px] bg-[#fff3c6] bg-opacity-80 backdrop-blur-sm py-3 rounded-2xl drop-shadow-md relative isolate overflow-hidden">
+          <motion.div
+            variants={aboutAnimate}
+            initial="hidden"
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.2 }}
+            className="w-full h-[400px] sm:h-full border border-solid border-[#cc920058] sm:max-md:w-[320px] md:w-[400px] bg-[#fff3c6] bg-opacity-80 backdrop-blur-sm py-3 rounded-2xl drop-shadow-md relative isolate overflow-hidden"
+          >
             <div className="absolute bottom-0 select-none max-w-[400px] -ml-[150px] left-[50%] -z-10 max-sm:left-[60%]">
               <img src={grass} alt="" />
             </div>
@@ -54,7 +66,7 @@ function About() {
             <div className="absolute -bottom-3 -left-[80px] select-none max-w-[250px] max-sm:-left-[50px] -z-30">
               <img src={tree} alt="" />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </motion.div>
