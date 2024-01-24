@@ -5,14 +5,14 @@ import Roadmap from "./Roadmap";
 import Section from "./Section";
 
 function Main() {
-  return (
-    <>
-      <Features />
-      <About />
-      <Brands />
-      <Roadmap />
-      <Section />
-    </>
-  );
+	return (
+		<>
+			<Features />
+			<About />
+			{/* <Brands /> */}
+			<Roadmap />
+			<Section />
+		</>
+	);
 }
 export default Main;
