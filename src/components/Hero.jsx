@@ -9,7 +9,7 @@ import herocoin from "@assets/images/hero-coin.png";
 import leaf from "@assets/images/leaf 7.png";
 import { ethers, BrowserProvider } from "ethers";
 import { contractAddress } from "../constants/constants";
-import contractABI from "@constants/contractABi.json";
+import contractABI from "@constants/contractABI.json";
 
 function Hero({ connectWallet }) {
 	const { isAuthenticated, isConnected } = useSelector((state) => state.web3);
