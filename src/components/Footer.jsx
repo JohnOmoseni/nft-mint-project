@@ -12,11 +12,13 @@ const FooterLink = ({ name, href, icon: Icon }) => (
 	</Link>
 );
 
+const year = new Date().getFullYear();
+
 function Footer() {
 	return (
 		<div className="relative md:fixed bottom-0 left-0 z-[999] w-full shadow-sm bg-[#242424] flex-row gap-8 !justify-between !text-neutral-300 px-5 max-sm:p-3">
 			<p className="font-familylight max-sm:text-sm  whitespace-nowrap mt-1 leading-0">
-				Cheetahlabs Copyright. 2023.
+				InfiniteWealth. {year}.
 			</p>
 			<LinkScroll
 				to="home"

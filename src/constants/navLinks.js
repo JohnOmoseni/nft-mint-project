@@ -1,6 +1,6 @@
 import { RxDiscordLogo } from "react-icons/rx";
 import { PiInstagramLogoLight, PiTwitterLogoFill } from "react-icons/pi";
-import { TbBrandFacebook } from "react-icons/tb";
+import { TbBrandFacebookFilled } from "react-icons/tb";
 
 export const navLinks = [
 	{
@@ -23,7 +23,7 @@ export const navLinks = [
 
 export const footerLinks = [
 	{
-		icon: TbBrandFacebook,
+		icon: TbBrandFacebookFilled,
 		name: "Facebook",
 		href: "https://web.facebook.com/groups/1789015331551141/?_rdc=1&_rdr",
 	},

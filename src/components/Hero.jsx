@@ -79,20 +79,19 @@ function Hero({ connectWallet }) {
 				<span className="w-max !flex py-1.5 px-2 mx-auto rounded-lg bg-green-200 bg-opacity-80 text-tiny !text-green-600">
 					Revolutionizing Agriculture...
 				</span>
-				<h1 className="capitalize px-2 relative sm:-mt-6  text-center select-none !text-shadow-200">
-					<span className="!font-familylight font-[400] leading-[50px]">
+				<h1 className="capitalize px-2 relative mt-1.5 sm:-mt-6  text-center select-none !text-shadow-200">
+					<span className="!font-familylight font-[400] leading-[50px] whitespace-nowrap max-sm:text-5xl">
 						Welcome to
 					</span>
 					<span className="!font-familybold !block sm:-mt-4">
 						Infinite Wealth
 					</span>
-					<div className="absolute -bottom-1.5 w-[90%] sm:w-[70%] sm:-bottom-1 left-[50%] translate-x-[-50%] h-[1px] -rotate-1 bg-green-500 rounded-md"></div>
+					<div className="absolute -bottom-1.5 w-[80%] sm:w-[70%] sm:-bottom-1 left-[50%] translate-x-[-50%] h-[1px] -rotate-1 bg-green-500 rounded-md"></div>
 				</h1>
 
 				<p className="w-full max-sm:font-[300] sm:max-w-[80ch] text-center mt-6 mx-auto">
-					Experience the fusion of AI-driven insightsand world-class security in
-					real estate tokenization. <br />
-					AssetLink: Where compliance meets innovation in property investment.
+					Infinite wealth stands at the forefront of innovation revolutionizing
+					the <br /> agricultural investment land scape.
 				</p>
 			</motion.div>
 
