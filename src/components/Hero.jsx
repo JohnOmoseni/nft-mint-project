@@ -25,17 +25,18 @@ function Hero({ connectWallet }) {
 			contractABI,
 			provider
 		);
-		console.log(contract, mintAmount);
+		const value = ethers.parseEther((0.08 * mintAmount).toString());
+		console.log(contract, mintAmount, value);
 		if (contract) {
 			try {
 				const res = await contract
 					.connect(signer)
 					.mint(ethers.parseEther(mintAmount.toString()), {
-						value: ethers.parseEther((0.01 * mintAmount).toString()),
+						value: ethers.parseEther((0.08 * mintAmount).toString()),
 					});
-				console.log(res);
 
 				res && dispatch(setShowConfetti(true));
+				console.log(res, value);
 			} catch (err) {
 				console.error(err);
 			}

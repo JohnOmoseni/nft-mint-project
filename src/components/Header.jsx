@@ -1,12 +1,12 @@
 import { navLinks } from "@constants/navLinks";
-import { useSelector } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { Link } from "react-scroll";
 import Button from "./Button";
 import LinkRow from "./LinkRow";
 import logo from "@assets/images/logo.png";
 
-const Header = ({ setOpenMenu }) => {
+const Header = ({ setOpenMenu, connectWallet }) => {
 	const { currentAcc, isConnected } = useSelector((state) => state.web3);
 
 	return (
@@ -50,6 +50,7 @@ const Header = ({ setOpenMenu }) => {
 			) : (
 				<Button
 					title="Connect Wallet"
+					onClick={connectWallet}
 					className="hidden md:block !whitespace-normal leading-4 text-neutral-300 text-[1rem] bg-black bg-opacity-40 border border-solid border-[#e6e4e462]"
 				/>
 			)}

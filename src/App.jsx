@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { AnimatePresence } from "framer-motion";
-import { networkChainId, contractAddress } from "@constants/constants";
-import { ethers, BrowserProvider } from "ethers";
+import { networkChainId } from "@constants/constants";
 
 import Header from "./components/Header";
 import Menu from "./components/Menu";
@@ -11,15 +10,33 @@ import Home from "./pages/Home";
 
 import "./index.css";
 import ConfettiEffect from "./components/Confetti";
-import { setCurrentChain } from "./redux/web3Slice";
+import { setCurrentChain, setCurrentAcc } from "./redux/web3Slice";
 
 function App() {
 	const [openMenu, setOpenMenu] = useState(false);
 	const { isConnected, showConfetti } = useSelector((state) => state.web3);
 	const dispatch = useDispatch();
 
+	const requestAccounts = async () => {
+		try {
+			// request accounts
+			const accounts = await window.ethereum.request({
+				method: "eth_requestAccounts",
+			});
+
+			console.log(accounts);
+			if (accounts?.length > 0) {
+				dispatch(setCurrentAcc(accounts[0]));
+			} else {
+				console.log("Create an account in your wallet");
+			}
+		} catch (err) {
+			console.log(err, "Error connecting to metamask");
+		}
+	};
+
 	const connectWallet = async () => {
-		if (!isConnected) return;
+		requestAccounts();
 
 		try {
 			const res = await window.ethereum.request({ method: "eth_chainId" });
@@ -37,6 +54,23 @@ function App() {
 			console.log(err, "Error connecting to wallet");
 		}
 	};
+
+	useEffect(() => {
+		let mounted = true;
+
+		if (typeof window.ethereum !== "undefined") {
+			window.ethereum.on("accountsChanged", (accounts) => {
+				accounts?.length > 0 && dispatch(setCurrentAcc(accounts[0]));
+			});
+		} else {
+			console.log("Metamask not detected>");
+		}
+
+		return () => {
+			window.ethereum.removeAllListeners();
+			mounted = false;
+		};
+	}, []);
 
 	return (
 		<div className="wrapper">

@@ -28,7 +28,7 @@ export const features = [
 	{
 		vector: vector1,
 		title: "I-Wealth NFT",
-		body: "infinite wealth stands at the forefront of innovation revolutionizing the agricultural investment land scape, through it cutting-edge tokenized platform by seamlessly integrating block chain technology with real world agriculture.",
+		body: "Infinite wealth stands at the forefront of innovation revolutionizing the agricultural investment land scape, through it cutting-edge tokenized platform by seamlessly integrating block chain technology with real world agriculture.",
 	},
 	{
 		vector: vector2,
@@ -43,6 +43,6 @@ export const features = [
 	{
 		vector: vector1,
 		title: "I-Wealth NFT",
-		body: "infinite wealth stands at the forefront of innovation revolutionizing the agricultural investment land scape, through it cutting-edge tokenized platform by seamlessly integrating block chain technology with real world agriculture.",
+		body: "Infinite wealth stands at the forefront of innovation revolutionizing the agricultural investment land scape, through it cutting-edge tokenized platform by seamlessly integrating block chain technology with real world agriculture.",
 	},
 ];
