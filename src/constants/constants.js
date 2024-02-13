@@ -1,6 +1,9 @@
-import vector1 from "@icons/Vector1.svg";
-import vector2 from "@icons/Vector2.svg";
-import vector3 from "@icons/Vector3.svg";
+import vector1 from "@icons/vector1.svg";
+import vector2 from "@icons/vector2.svg";
+import vector3 from "@icons/vector3.svg";
+import nft1 from "@assets/images/nft1.png";
+import nft2 from "@assets/images/nft2.png";
+import nft3 from "@assets/images/nft3.png";
 
 export const networkChainId = 80001;
 export const contractAddress = "0xdA16017eA38989F134aaB78F34b30DD6000079D1";
@@ -24,6 +27,7 @@ export const roadmap = [
 		list: ["Card holder's airdrop", "Farming period", "Token launch."],
 	},
 ];
+
 export const features = [
 	{
 		vector: vector1,
@@ -44,5 +48,20 @@ export const features = [
 		vector: vector1,
 		title: "I-Wealth NFT",
 		body: "Infinite wealth stands at the forefront of innovation revolutionizing the agricultural investment land scape, through it cutting-edge tokenized platform by seamlessly integrating block chain technology with real world agriculture.",
+	},
+];
+
+export const collection = [
+	{
+		src: nft1,
+		text: "IWEALTH # 1",
+	},
+	{
+		src: nft2,
+		text: "IWEALTH #2",
+	},
+	{
+		src: nft3,
+		text: "IWEALTH #3",
 	},
 ];

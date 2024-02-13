@@ -31,11 +31,11 @@ const Card = ({ title, body, idx, vector }) => {
 				whileInView="animate"
 				viewport={{ once: true, amount: 0.2 }}
 				custom={idx}
-				className=" border border-solid border-[#00cc5258] self-start bg-[#FFF8DF] bg-opacity-60 backdrop-blur-md py-3 px-4 rounded-2xl card-shadow transition-sm odd:self-end"
+				className=" border border-solid border-br-clr self-start bg-black dp-shad-green py-3 px-4 rounded-2xl transition-sm odd:self-end"
 			>
 				<div className="flex-row !justify-start gap-2">
 					<img src={vector} alt="" className="!w-6" />
-					<h3 className="text-black font-familymedium leading-5">{title}</h3>
+					<h3 className="font-familymedium leading-5">{title}</h3>
 				</div>
 				<p
 					className={`${
@@ -46,7 +46,8 @@ const Card = ({ title, body, idx, vector }) => {
 				</p>
 				<Button
 					title={lineClamp ? "Read More" : "Collapse..."}
-					className="mt-4 mb-1 !capitalize text-white bg-black bg-opacity-80 opacity-95 transition-colors hover:bg-black border border-solid border-[#e6e4e4be]"
+					// className={`${link}`}
+					className="mt-4 mb-1 !capitalize text-black bg-white transition-colors border border-solid border-[#00FF66]"
 					onClick={() => setLineClamp(!lineClamp)}
 				/>
 			</motion.div>
@@ -56,8 +57,8 @@ const Card = ({ title, body, idx, vector }) => {
 
 function Features() {
 	return (
-		<div className="relative bg-[#fff0bd] p-section !pb-10 min-h-[70vh] sm:min-h-[100vh] bg-img-features">
-			<div className=" mx-auto bg-[#222] bg-opacity-80 backdrop-blur-sm rounded-full overflow-auto px-3 w-[60px] h-[35px]">
+		<div className="relative p-section !pb-10 min-h-[70vh] sm:min-h-[100vh]">
+			<div className=" mx-auto bg-[#111] bg-opacity-80 backdrop-blur-sm rounded-full overflow-auto py-1 px-2 w-[70px] h-[35px] border border-solid border-green-500">
 				<img src={logo} alt="" className="" />
 			</div>
 			<h2 className="text-center capitalize green my-1">Our Features</h2>
@@ -66,7 +67,7 @@ function Features() {
 					variants={container}
 					initial="hidden"
 					whileInView="animate"
-					className="scroll-snap py-12 pb-[4em] sm:py-[5em] sm:pb-[3em] px-3 gap-4 sm:gap-8 justify-between grid grid-cols-features w-[98%] mx-auto max-sm:auto-cols-min sm:max-md:auto-cols-[40%] h-features sm:min-h-[80vh]"
+					className="scroll-snap py-12 pb-[4em] sm:py-[5em] sm:pb-[3em] px-3 gap-4 sm:gap-8 justify-between grid grid-cols-features w-[96%] mx-auto max-sm:auto-cols-min sm:max-md:auto-cols-[40%] h-features sm:min-h-[80vh]"
 				>
 					{features.map((item, idx) => {
 						return <Card {...item} key={idx} idx={idx} />;

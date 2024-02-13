@@ -24,10 +24,10 @@
 		@apply text-primary font-bold font-familybold text-shadow-100;
 	}
 	h2 {
-		@apply text-secondary font-semibold font-familybold text-shadow-200;
+		@apply text-secondary text-[#00FF66] font-semibold font-familybold text-shadow-200;
 	}
 	h3 {
-		@apply text-subtitle  font-familymedium text-shadow-200;
+		@apply text-subtitle font-familymedium text-shadow-200;
 	}
 }
 
@@ -45,7 +45,7 @@
 
 	.text-gradient-100 {
 		@apply text-gradient;
-		background-image: linear-gradient(to bottom right, #72f8a7, #00a261 90%);
+		background-image: linear-gradient(to bottom, #d9ffe8, #06ff9c 10%);
 	}
 
 	.text-shadow-100 {
@@ -65,8 +65,8 @@
 	.p-section {
 		padding: max(3%, 1.5rem) 0 1em;
 	}
-	.dp-shad-black {
-		filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+	.dp-shad-green {
+		filter: drop-shadow(1px 1px 2px #05ff00);
 	}
 
 	.bg-img-roadmap {
@@ -76,30 +76,11 @@
 
 	.bg-img-hero {
 		@apply w-full bg-no-repeat;
-		background-image: url("/public/images/coin-green.png"),
-			url("/public/images/yellow-leaf.png"),
-			url("/public/images/yellow-leaf-blur.png"),
-			url("/public/images/coin-blur.png"), url("/public/images/yellow-coin.png"),
-			url("/public/images/leaf 7.png"), url("/public/images/green-leaf.png"),
-			url("/public/images/yellow-leaf.png"),
-			url("/public/images/coin-green.png");
-		background-size: 20px, 50px, 100px, 200px, 50px, 80px, 200px, 40px, 20px;
-		background-position: 5px 10px, right top, 90% 85%, 90% 10%, 80% 50%, 10% 90%,
-			10% 15%, left bottom, right 90%;
-	}
-
-	.bg-img-features {
-		@apply w-full bg-no-repeat;
-		background-image: url("/public/images/features.png");
-		background-size: 100% 100px;
-		background-position: bottom;
-	}
-	.bg-img-about {
-		@apply w-full bg-no-repeat;
-		background-image: url("/public/images/cloud.png"),
-			url("/public/images/Cloud 2.png");
-		background-size: 30% 90px, 65% 80px;
-		background-position: left top, right top;
+		background-image: linear-gradient(140deg, black 10%, transparent),
+			url("/public/images/bg-hero.png");
+		background-size: cover;
+		background-position: center, right bottom;
+		mix-blend-mode: screen;
 	}
 
 	.radial {
@@ -124,21 +105,12 @@
 
 	@media (max-width: 640px) {
 		.bg-img-hero {
-			background-image: url("/public/images/coin-green.png"),
-				url("/public/images/yellow-leaf.png"),
-				url("/public/images/yellow-coin.png"), url("/public/images/leaf 7.png"),
-				url("/public/images/green-leaf.png"),
-				url("/public/images/coin-green.png");
-			background-size: 50px, 50px, 30px, 30px, 60px, 15px;
-			background-position: -20px 6%, 90% 70%, 95% 30%, 5px 80%, right 55px,
-				right bottom;
-		}
-		.radial {
-			width: 300px;
-			height: 300px;
-			top: calc(70% - 200px);
-			left: 10%;
-			mix-blend-mode: color-burn;
+			@apply w-full bg-no-repeat;
+			background-image: linear-gradient(180deg, black 10%, transparent),
+				url("/public/images/bg-hero.png");
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
 		}
 	}
 }
@@ -155,5 +127,8 @@
 	}
 	.grid-cols-roadmap {
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+	.grid-cols-collection {
+		grid-template-columns: repeat(3, minmax(320px, 1fr));
 	}
 }

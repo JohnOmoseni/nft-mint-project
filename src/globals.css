@@ -1,141 +1,142 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  min-width: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	min-width: 0;
 }
 
 html {
-  overflow-x: hidden;
-  height: 100%;
-  font-family: "Gilroy-Regular" ui-sans-serif, system-ui, "-apple-system",
-    "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
-  font-weight: 400;
-  font-feature-settings: normal;
-  font-variation-settings: normal;
+	overflow-x: hidden;
+	height: 100%;
+	font-family: "Gilroy-Regular" ui-sans-serif, system-ui, "-apple-system",
+		"BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans",
+		sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+	font-weight: 400;
+	font-feature-settings: normal;
+	font-variation-settings: normal;
 }
 
 :root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  text-size-adjust: none;
-  text-decoration-skip-ink: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: none;
+	text-decoration-skip-ink: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 
-  --color-bg: #fffaea;
-  --color-text: "#111";
-  --color-scroll-thumb: "#005958";
-  --radial-size: 200px;
-  --drop-shadow: "";
+	--color-bg: #0d0d0d;
+	--color-text: #e6fff0;
+	--color-scroll-thumb: #00ff665a;
+	--radial-size: 200px;
+	--drop-shadow: #05ff00;
+	--br: #b0ffd0;
 }
 
 body {
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden auto;
-  line-height: inherit;
-  color: #111;
-  background: var(--color-bg);
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden auto;
+	line-height: inherit;
+	color: var(--color-text);
+	background: var(--color-bg);
 }
 
 body::selection {
-  background-color: #18dc87;
+	background-color: #18dc87;
 }
 
 .wrapper {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  position: relative;
-  overflow: hidden;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	position: relative;
+	overflow: hidden;
 }
 
 .wrapper :is(a, .icon, button) {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 small {
-  font-size: 80%;
+	font-size: 80%;
 }
 
 .wrapper .icon {
-  display: grid;
-  place-items: center;
-  will-change: filter;
-  transition: filter 300ms;
+	display: grid;
+	place-items: center;
+	will-change: filter;
+	transition: filter 300ms;
 }
 .wrapper :where(.icon:hover, button, a:hover) {
-  filter: drop-shadow(0 0 1em var(--dp-shadow));
+	filter: drop-shadow(0 0 1em var(--dp-shadow));
 }
 
 .wrapper :where(a, span) {
-  color: inherit;
-  font-family: inherit;
-  display: inline-block;
-  text-decoration: none;
+	color: inherit;
+	font-family: inherit;
+	display: inline-block;
+	text-decoration: none;
 }
 
 .wrapper :where(input:hover, input:focus, textarea:hover, textarea:focus) {
-  outline: none;
+	outline: none;
 }
 
 .wrapper :where(img) {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: inherit;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	border-radius: inherit;
 }
 
 .wrapper :where(ul li) {
-  list-style-type: none;
-  display: list-item;
+	list-style-type: none;
+	display: list-item;
 }
 
 /* fast-marquee custom styling */
 .rfm-initial-child-container,
 .rfm-marquee {
-  gap: 10em;
+	gap: 10em;
 }
 
 .rfm-marquee:last-of-type {
-  margin-left: 8em;
+	margin-left: 8em;
 }
 
 .rfm-child {
-  width: 200px;
+	width: 200px;
 }
 
 /* scroll-snap */
 .wrapper .scroll-snap {
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 1em;
+	scroll-snap-type: inline mandatory;
+	scroll-padding-inline: 1em;
 }
 .wrapper .scroll-snap > * {
-  scroll-snap-align: start;
+	scroll-snap-align: start;
 }
 .wrapper .scroll-snap::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+	width: 0;
+	height: 0;
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
-  height: 100%;
+	width: 4px;
+	height: 100%;
 }
 
 ::-webkit-scrollbar-track {
-  background: #aaa;
+	background: #444;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-scroll-thumb);
-  border-radius: 1rem;
+	background: var(--color-scroll-thumb);
+	border-radius: 1rem;
 }

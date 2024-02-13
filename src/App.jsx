@@ -3,14 +3,16 @@ import { Route, Routes } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { AnimatePresence } from "framer-motion";
 import { networkChainId } from "@constants/constants";
+import ConfettiEffect from "./components/Confetti";
+import { setCurrentChain, setCurrentAcc } from "./redux/web3Slice";
 
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Home from "./pages/Home";
+import AOS from "aos";
 
+import "aos/dist/aos.css";
 import "./index.css";
-import ConfettiEffect from "./components/Confetti";
-import { setCurrentChain, setCurrentAcc } from "./redux/web3Slice";
 
 function App() {
 	const [openMenu, setOpenMenu] = useState(false);

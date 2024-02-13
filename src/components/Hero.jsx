@@ -4,9 +4,6 @@ import { container, listAnimate } from "@utils";
 import { useDispatch, useSelector } from "react-redux";
 import { setShowConfetti } from "@redux/web3Slice";
 import Button from "./Button";
-import heroimg from "@assets/images/heroimg.png";
-import herocoin from "@assets/images/hero-coin.png";
-import leaf from "@assets/images/leaf 7.png";
 import { ethers, BrowserProvider } from "ethers";
 import { contractAddress } from "../constants/constants";
 import contractABI from "@constants/contractABI.json";
@@ -20,6 +17,8 @@ function Hero({ connectWallet }) {
 		const provider = new BrowserProvider(window.ethereum);
 		const signer = await provider.getSigner();
 
+		console.log(provider.getBalance("ethers.eth"));
+		return;
 		const contract = new ethers.Contract(
 			contractAddress,
 			contractABI,
@@ -68,35 +67,39 @@ function Hero({ connectWallet }) {
 			initial="hidden"
 			whileInView="animate"
 			viewport={{ once: true, amount: 0.2 }}
-			className="bg-img-hero relative w-full sm:min-h-[80vh] max-sm:pt-[20vh] pt-[6%] flex-column"
+			className="bg-img-hero relative w-full h-dvh max-sm:pt-[20vh] pt-[10%] pb-8 flex-column"
 		>
 			<motion.div
 				variants={listAnimate}
 				initial="hidden"
 				whileInView="animate"
 				viewport={{ once: true, amount: 0.1 }}
-				className="w-full px-4"
+				className="w-full px-4 sm:px-[3%]"
 			>
-				<span className="w-max !flex py-1.5 px-2 mx-auto rounded-lg bg-green-200 bg-opacity-80 text-tiny !text-green-600">
-					Revolutionizing Agriculture...
-				</span>
-				<h1 className="capitalize px-2 relative mt-1.5 sm:-mt-6  text-center select-none !text-shadow-200">
-					<span className="!font-familylight font-[400] leading-[50px] whitespace-nowrap max-sm:text-5xl">
-						Welcome to
-					</span>
-					<span className="!font-familybold !block sm:-mt-4">
-						Infinite Wealth
-					</span>
-					<div className="absolute -bottom-1.5 w-[80%] sm:w-[70%] sm:-bottom-1 left-[50%] translate-x-[-50%] h-[1px] -rotate-1 bg-green-500 rounded-md"></div>
+				<div className="w-max flex gap-1 py-1.5 px-3 sm:ml-1 rounded-lg bg-green-200 text-tiny !text-[#00CC52] max-sm:mx-auto">
+					<div className="animate-pulse relative w-3 h-3 border border-solid border-green-600 rounded-full icon">
+						<div className="rounded-full w-2 h-2 bg-green-400 absolute left-[50%] translate-x-[-50%]"></div>
+					</div>
+					<span>Revolutionizing Agriculture...</span>
+				</div>
+				<h1 className="capitalize relative text-[#FFFAEA] max-sm:mt-1 max-sm:text-center !text-shadow-200">
+					<span className="whitespace-nowrap">Welcome to</span>
+					<span className="sm:-mt-4 !block">Infinite Wealth</span>
 				</h1>
 
-				<p className="w-full max-sm:font-[300] sm:max-w-[80ch] text-center mt-6 mx-auto">
+				<p className="w-full max-sm:font-[300] sm:max-w-[80ch] max-sm:text-center text-light-green mt-2 mx-2">
 					Infinite wealth stands at the forefront of innovation revolutionizing
 					the <br /> agricultural investment land scape.
 				</p>
+
+				<Button
+					title={isConnected && isAuthenticated ? "Mint NFT" : "Connect Wallet"}
+					className="bg-[#00E65C] max-sm:mx-auto flex my-8 mx-2 capitalize shadow-sm hover:!dp-shad-black"
+					onClick={handleButtonClick}
+				/>
 			</motion.div>
 
-			<motion.div
+			{/* <motion.div
 				variants={listAnimate}
 				initial="hidden"
 				whileInView="animate"
@@ -107,10 +110,7 @@ function Hero({ connectWallet }) {
 				<div className="absolute top-[-10%] left-[45%] -z-10 w-[20px]">
 					<img src={leaf} alt="" />
 				</div>
-				<div className="absolute bottom-0 -z-10 w-[90%]">
-					<img src={herocoin} alt="" />
-				</div>
-			</motion.div>
+			</motion.div> */}
 
 			<div className="absolute bottom-4 left-[50%] translate-x-[-50%] flex-column gap-1.5 !items-center">
 				{isConnected && isAuthenticated && (
@@ -135,11 +135,6 @@ function Hero({ connectWallet }) {
 						</span>
 					</div>
 				)}
-				<Button
-					title={isConnected && isAuthenticated ? "Mint NFT" : "Connect Wallet"}
-					className="bg-[#00E65C] !py-1 !px-4 capitalize shadow-sm hover:!dp-shad-black"
-					onClick={handleButtonClick}
-				/>
 			</div>
 		</motion.div>
 	);
