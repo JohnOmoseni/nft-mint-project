@@ -9,7 +9,7 @@ function Main() {
 		<>
 			<div
 				className="relative min-h-[100vh] bg-no-repeat bg-cover bg-center bg-blend-screen bg-fixed"
-				style={{ backgroundImage: "url(/images/bg.png)" }}
+				style={{ backgroundImage: "url(/public/images/bg.png)" }}
 			>
 				<div className="relative isolate">
 					<video
