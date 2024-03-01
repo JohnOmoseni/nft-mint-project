@@ -53,7 +53,10 @@ const Header = ({ setOpenMenu, connectWallet }) => {
 				/>
 			)}
 
-			<div className=" md:hidden icon" onClick={() => setOpenMenu(true)}>
+			<div
+				className="block md:hidden cursor-pointer"
+				onClick={() => setOpenMenu(true)}
+			>
 				<HiOutlineMenuAlt4 size={20} color="#dddeee" />
 			</div>
 		</header>

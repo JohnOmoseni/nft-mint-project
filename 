@@ -1,0 +1,89 @@
+[33mcommit 108c194cb68f72c9337d4571c9aadc7f2716cfb9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Fri Mar 1 09:08:41 2024 +0100
+
+    chore: changed wealth instances to sprouts
+
+[33mcommit 9c2fe1bafe331a9aed6dcc54b7d12525f5efdc24[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Mon Feb 26 19:11:11 2024 +0100
+
+    chore: edited main.jsx
+
+[33mcommit 073028f1c6b33e11b6b3c4aedb42f87ca82860a6[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Tue Feb 13 09:34:31 2024 +0100
+
+    chore: changed icons path
+
+[33mcommit 23ed13977b915788e9e0c5ee1cd8437f1f80f72d[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Tue Feb 13 09:30:04 2024 +0100
+
+    feat: added bg video
+
+[33mcommit d3acc10c8d11a9cd297a4a88ef5b3d8d5b4e1c44[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Tue Feb 13 07:29:37 2024 +0100
+
+    feat: added bg video
+
+[33mcommit 5025bbf12c7673f2face1ebd761168771605e199[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Thu Jan 25 09:47:44 2024 +0100
+
+    chore: edited header section
+
+[33mcommit 3da090d34452fa9d5fe7495802305a49fd9cccea[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Thu Jan 25 09:23:39 2024 +0100
+
+    chore: edited footer section
+
+[33mcommit c58ea5de761090f1a43d5801f06a73d932aa9cb7[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Wed Jan 24 04:46:08 2024 +0100
+
+    chore: updated contractAbI path
+
+[33mcommit e36663d223bbb2e9893d13bb44e220d5f13913b1[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Wed Jan 24 04:39:29 2024 +0100
+
+    feat: added smart contract logic
+
+[33mcommit f0283c900de29a1d6b005c044a640ad0e4fc23fe[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Thu Jan 18 16:08:54 2024 +0100
+
+    added animations
+
+[33mcommit bab2ecedc8fedc1e402b1681ed8b11729eed7b2b[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Thu Jan 18 16:01:13 2024 +0100
+
+    added animations
+
+[33mcommit 9fa3efa83e88345c77fd9649a4426191727641e0[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Thu Jan 18 15:41:42 2024 +0100
+
+    chore: added animations
+
+[33mcommit 9bc7f382df1187b078326895112b97e8a8ab9695[m
+Author: JohnOmoseni <johnnyomoseni100@gmail.com>
+Date:   Thu Jan 18 15:07:49 2024 +0100
+
+    chore: updated sections
+
+[33mcommit b79e192b9a66b62d15f964a9a7aea19262074fcc[m
+Author: Johnny <johnnyomoseni100@gmail.com>
+Date:   Mon Jan 15 23:22:46 2024 +0100
+
+    feat: update features section
+
+[33mcommit 1a9795a7f0891f8c3019aae021cc95a1c1de91d5[m
+Author: Johnny <johnnyomoseni100@gmail.com>
+Date:   Mon Jan 15 23:10:25 2024 +0100
+
+    build: initial commit
