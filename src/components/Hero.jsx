@@ -84,11 +84,11 @@ function Hero({ connectWallet }) {
 				</div>
 				<h1 className="capitalize relative text-[#FFFAEA] max-sm:mt-1 max-sm:text-center !text-shadow-200">
 					<span className="whitespace-nowrap">Welcome to</span>
-					<span className="sm:-mt-4 !block">Infinite Wealth</span>
+					<span className="sm:-mt-4 !block">Infinite Sprouts</span>
 				</h1>
 
 				<p className="w-full max-sm:font-[300] sm:max-w-[80ch] max-sm:text-center text-light-green mt-2 mx-2">
-					Infinite wealth stands at the forefront of innovation revolutionizing
+					Infinite sprouts stands at the forefront of innovation revolutionizing
 					the <br /> agricultural investment land scape.
 				</p>
 

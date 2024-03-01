@@ -16,7 +16,7 @@ function Section() {
 			</div>
 			<div className="mt-6 md:mt-[2%] md:ml-[4%] flex-column gap-2">
 				<p className="w-full text-sm text-center text-white md:text-lg">
-					Want to invest in infinite wealth?
+					Want to invest in infinite sprouts?
 				</p>
 				<a
 					href="https://mikesonsmith88.wixsite.com/infinite_wealth"

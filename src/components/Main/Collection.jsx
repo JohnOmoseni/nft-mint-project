@@ -10,9 +10,9 @@ import Button from "../Button";
 import { collection } from "@constants/constants";
 
 const Card = ({ src, text }) => (
-	<div className="relative w-full min-h-[320px] sm:min-h-[340px] rounded-xl border-2 border-solid border-br-clr border-opacity-70 overflow-hidden shadow-md">
+	<div className="relative w-full max-w-[320px] md:max-w-[380px] min-h-[320px] sm:min-h-[340px] rounded-xl border-2 border-solid border-br-clr border-opacity-70 overflow-hidden shadow-md">
 		<div className="absolute inset-0 tracking-normal -mt-2">
-			<img src={src} alt="" />
+			<img src={src} alt="" className="" />
 		</div>
 		<div className="absolute w-full min-h-[2rem] text-center font-semibold text-2xl p-3 bottom-0 left-0 bg-black bg-opacity-95 text-shadow-100 border-t-2 border-solid border-br-clr border-opacity-70">
 			{text}
@@ -37,7 +37,7 @@ const Brands = () => {
 				Our NFT Collection
 			</h2>
 
-			<div className="mx-auto w-[90%] mt-[4rem] mb-[3rem] flex-column sm:grid grid-cols-2 place-items-center lg:grid-cols-collection gap-8 tracking-normal overflow-hidden">
+			<div className="mx-auto w-[90%] sm:w-[90%] mt-[4rem] mb-[3rem] flex-column !items-center sm:grid grid-cols-2 place-items-center lg:grid-cols-collection gap-8 tracking-normal overflow-hidden">
 				{collection?.map(({ text, src }, idx) => {
 					return <Card key={idx} src={src} text={text} />;
 				})}

@@ -25,7 +25,7 @@ const Header = ({ setOpenMenu, connectWallet }) => {
 					className="relative !w-[50px] sm:!w-[60px] group-hover:drop-shadow-md"
 				/>
 				<p className="text-sm md:text-lg font-familybold tracking-tight whitespace-nowrap uppercase dp-shad -ml-1 group-hover:text-light-green">
-					INFINITY WEALTH
+					INFINITY SPROUTS
 				</p>
 			</Link>
 
@@ -53,7 +53,7 @@ const Header = ({ setOpenMenu, connectWallet }) => {
 				/>
 			)}
 
-			<div className="block md:hidden" onClick={() => setOpenMenu(true)}>
+			<div className=" md:hidden icon" onClick={() => setOpenMenu(true)}>
 				<HiOutlineMenuAlt4 size={20} color="#dddeee" />
 			</div>
 		</header>

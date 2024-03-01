@@ -9,7 +9,7 @@ export const Card = ({ phase, list, idx }) => (
 		whileInView="animate"
 		viewport={{ once: true, amount: 0.2 }}
 		custom={idx}
-		className="w-full bg-[#D9FFE8] bg-opacity-40  py-4 px-4 flex-column !justify-start gap-3 backdrop-blur-md border border-solid border-[#e9fafa3f] min-h-[220px] sm:min-h-[280px] transition-sm rounded-md shadow-200 hover:backdrop-blur-sm hover:dp-shad"
+		className="w-full even:backdrop-blur-lg bg-[#D9FFE8] bg-opacity-40  py-4 px-4 flex-column !justify-start gap-3 backdrop-blur-md border border-solid border-[#e9fafa3f] min-h-[220px] sm:min-h-[280px] md:min-h-full transition-sm rounded-md shadow-200 hover:backdrop-blur-sm hover:dp-shad"
 	>
 		<h3 className="font-familybold text-gradient-100 text-gradient-100 opacity-80">
 			{phase}
@@ -34,7 +34,7 @@ function Roadmap() {
 			className="bg-img-roadmap w-full min-h-[110vh] relative py-8 sm:py-[4em] -mt-2"
 		>
 			<h2 className="text-center capitalize green">Roadmap</h2>
-			<ul className="lg:absolute w-[90%] lg:w-[80%] max-sm:mt-[3em] mt-[4em] mb-6 bottom-[10%] left-0 right-0 mx-auto grid grid-cols-roadmap items-center gap-8">
+			<ul className=" w-[90%] lg:w-[80%] mt-[2em] mb-6 mx-auto flex-column md:grid grid-cols-roadmap items-center gap-8">
 				{roadmap?.map((item, idx) => (
 					<Card key={idx} {...item} idx={idx} />
 				))}

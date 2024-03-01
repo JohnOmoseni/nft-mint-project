@@ -65,11 +65,12 @@ function App() {
 				accounts?.length > 0 && dispatch(setCurrentAcc(accounts[0]));
 			});
 		} else {
+			// show a toast/sonner message
 			console.log("Metamask not detected>");
 		}
 
 		return () => {
-			window.ethereum.removeAllListeners();
+			window?.ethereum?.removeAllListeners();
 			mounted = false;
 		};
 	}, []);

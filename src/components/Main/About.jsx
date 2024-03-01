@@ -18,7 +18,7 @@ function About() {
 					// data-aos-duration="3000"
 					className="capitalize w-full text-2xl max-md:text-center text-shadow-200"
 				>
-					Explore Infinite Wealth
+					Explore Infinite Sprouts
 				</p>
 				<div className="w-full flex-column md:grid grid-columns-two md:items-center gap-4 mx-auto md:mt-8 md:min-h-[60vh]">
 					<motion.div
@@ -31,7 +31,7 @@ function About() {
 						<div className="w-full">
 							<div className="my-6 max-md:text-center w-full md:max-w-[50ch]  text-neutral-200 md:pr-3">
 								<p className="text-neutral-300">
-									Infinite wealth stands at the forefront of innovation
+									Infinite sprouts stands at the forefront of innovation
 									revolutionizing the agricultural investment land scape,
 									through it cutting-edge tokenized platform by seamlessly
 									integrating block chain technology with real world
@@ -39,8 +39,9 @@ function About() {
 								</p>
 
 								<p className="my-8 text-neutral-300">
-									<strong className="text-white">I-wealth vision</strong> <br />
-									Infinite wealth seeks to provide global opportunity for
+									<strong className="text-white">I-sprouts vision</strong>{" "}
+									<br />
+									Infinite sprouts seeks to provide global opportunity for
 									agricultural investment by unity block chain technology with
 									real world agriculture, using high and updated technology to
 									facilitate easy interaction with agriculture. and with our
@@ -49,7 +50,7 @@ function About() {
 								</p>
 
 								<p className="text-neutral-300">
-									<strong className="text-white">I-wealth mission</strong>
+									<strong className="text-white">I-sprouts mission</strong>
 									<br /> Our mission is to revolutionize the agricultural sector
 									by seamlessly integrating block chain technology with real
 									world agriculture and also the use of updated technical
