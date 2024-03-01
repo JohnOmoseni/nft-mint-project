@@ -47,7 +47,7 @@ function Menu({ setOpenMenu }) {
 				style={{ backgroundImage: "url(/images/bg.png)" }}
 			>
 				<span
-					className="absolute top-4 right-5 p-1 transition-colors active:scale-95 hover:text-white"
+					className="absolute top-4 right-5 icon p-1 transition-colors active:scale-95 hover:text-white"
 					onClick={() => setOpenMenu(false)}
 					title="close-menu"
 				>
