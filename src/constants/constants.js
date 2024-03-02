@@ -46,7 +46,8 @@ export const features = [
 	{
 		vector: vector1,
 		title: "I-Sprouts NFT",
-		body: "Infinite Sprouts stands at the forefront of innovation revolutionizing the agricultural investment land scape, through it cutting-edge tokenized platform by seamlessly integrating block chain technology with real world agriculture.",
+		body: `Our NFT is designed as a reward system for our early supporters, we have  a collection of 4,444 NFT's with good traits and attributes. 
+		This collection provides holder's with white list access to our token pre-sale allowing the mint taken at a lesser price than the price at stage two. Now this would put them in front of the line in terms of trading and also in terms of investing in the project`,
 	},
 	{
 		vector: vector2,
@@ -56,7 +57,7 @@ export const features = [
 	{
 		vector: vector3,
 		title: "Blockchain Farming",
-		body: "Blockchain farming is a revolutionary investment opportunity that combines the power of blockchain technology with the traditional agricultural industry. By integrating cutting-edge blockchain technology into agriculture, we are able to provide investors with a unique opportunity to invest in a growing industry with.",
+		body: "Blockchain farming is a revolutionary investment opportunity that combines the power of blockchain technology with the traditional agricultural industry. By integrating cutting-edge blockchain technology into agriculture, we are able to provide investors with a unique opportunity to invest in a growing industry with...",
 	},
 ];
 

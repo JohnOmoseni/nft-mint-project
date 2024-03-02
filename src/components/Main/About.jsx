@@ -42,19 +42,20 @@ function About() {
 									<strong className="text-white">I-sprouts vision</strong>{" "}
 									<br />
 									Infinite sprouts seeks to provide global opportunity for
-									agricultural investment by unity block chain technology with
+									agricultural investment by linking blockchain technology with
 									real world agriculture, using high and updated technology to
 									facilitate easy interaction with agriculture. and with our
-									innovative block chain- based platform we are making it
+									innovative blockchain based platform we are making it
 									possible.
 								</p>
 
 								<p className="text-neutral-300">
 									<strong className="text-white">I-sprouts mission</strong>
-									<br /> Our mission is to revolutionize the agricultural sector
-									by seamlessly integrating block chain technology with real
-									world agriculture and also the use of updated technical
-									equipment's and machinery to explore more possibilities in the
+									<br />
+									Our mission is to revolutionize the agricultural sector by
+									seamlessly integrating blockchain technology with real world
+									agriculture and also the use of updated technical equipment's
+									and machinery to explore more possibilities in the
 									agricultural sector, using tokenization as a medium to allow
 									fractional ownership of assets.
 								</p>

@@ -76,7 +76,7 @@ function Hero({ connectWallet }) {
 				viewport={{ once: true, amount: 0.1 }}
 				className="w-full px-4 sm:px-[3%]"
 			>
-				<div className="w-max flex gap-1 py-1.5 px-3 sm:ml-1 rounded-lg bg-green-200 text-tiny !text-[#00CC52] max-sm:mx-auto">
+				<div className="w-max flex gap-1 py-1.5 px-3 sm:ml-1 rounded-full bg-green-200 text-tiny !text-[#00CC52] max-sm:mx-auto">
 					<div className="animate-pulse relative w-3 h-3 border border-solid border-green-600 rounded-full icon">
 						<div className="rounded-full w-2 h-2 bg-green-400 absolute left-[50%] translate-x-[-50%]"></div>
 					</div>

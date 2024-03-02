@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import { networkChainId } from "@constants/constants";
 import ConfettiEffect from "./components/Confetti";
 import { setCurrentChain, setCurrentAcc } from "./redux/web3Slice";
+import { toast } from "sonner";
 
 import Header from "./components/Header";
 import Menu from "./components/Menu";
@@ -65,7 +66,8 @@ function App() {
 				accounts?.length > 0 && dispatch(setCurrentAcc(accounts[0]));
 			});
 		} else {
-			// show a toast/sonner message
+			// show a toast message
+			toast("Event has been created.");
 			console.log("Metamask not detected>");
 		}
 

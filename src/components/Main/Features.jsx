@@ -18,7 +18,7 @@ const defaultOptions = {
 	easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
 };
 
-const Card = ({ title, body, idx, vector }) => {
+const Card = ({ title, body, idx, vector, tag }) => {
 	const [lineClamp, setLineClamp] = useState(true);
 	return (
 		<Tilt
